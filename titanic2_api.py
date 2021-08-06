@@ -19,8 +19,6 @@ def example():
 @app.route("/predict", methods = ["POST"])
 def predict():
     input_data = request.get_json()
-    print(input_data)
-    #input_data = json.loads(input_data) # convert to dict
 
     result = calculate.prediction(input_data)
 
