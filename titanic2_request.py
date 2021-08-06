@@ -1,7 +1,7 @@
 import requests
 
 
-api_url = "http://localhost:5000/predict"
+api_url = "http://localhost:3000/predict"
 
 passenger_data = {"Age": 30,
                   "Pclass": 2,
