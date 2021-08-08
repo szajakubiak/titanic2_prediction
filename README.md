@@ -17,9 +17,21 @@ TensorFlow Sequential model consisted of four fully connected layers was used. I
 ## REST API
 
 REST API was developed using Flask and saved as **app.py** file. It consists of two requests:
+
 * GET request at **localhost:5000/example** which returns json file which can be used as a template for POST request with passenger data
-* POST request at **localhost:5000/predict** which will accept json file with passenger data and return json file with calculated survival rate
-To calculate the survival rate **prediction** function from the **calculate.py** script will be called.
+* POST request at **localhost:5000/predict** which will accept json file with passenger data and return json file with calculated survival rate, to calculate the survival rate **prediction** function from the **calculate.py** script will be called
+
+Blueprint for json with the sample input data:
+
+    {
+        "Age": 38,
+        "Pclass": 2,
+        "SibSp": 0,
+        "Parch": 1,
+        "Fare": 30.00,
+        "Sex": "male",
+        "Embarked": "S"
+    }
 
 ## Docker image
 
